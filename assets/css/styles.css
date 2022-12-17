@@ -1,0 +1,14 @@
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --orange: #ff7d1a;
+  --pale-orange: #ffede0;
+  --dark-blue: #1d2025;
+  --grayish-blue: #b6bcc8;
+  --dark-grayish-blue: #68707d;
+  --light-grayish-blue: #f7f8fd;
+}

@@ -1,7 +1,3 @@
-body {
-  font-family: "Kumbh Sans", sans-serif;
-}
-
 :root {
   --white: #fff;
   --black: #000;
@@ -11,4 +7,52 @@ body {
   --grayish-blue: #b6bcc8;
   --dark-grayish-blue: #68707d;
   --light-grayish-blue: #f7f8fd;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+.navbar-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu li {
+  color: var(--dark-grayish-blue);
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu img {
+  margin-right: 2rem;
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.profile-content img:first-child {
+  cursor: pointer;
 }

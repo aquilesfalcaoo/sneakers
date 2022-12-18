@@ -27,7 +27,7 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 0;
-  border-bottom: 1px solid var(--light-grayish-blue);
+  border-bottom: 2px solid var(--light-grayish-blue);
   position: relative;
 }
 
@@ -36,7 +36,8 @@ li {
   gap: 2rem;
 }
 
-.menu li {
+.menu li,
+a {
   color: var(--dark-grayish-blue);
 }
 
@@ -45,6 +46,7 @@ li {
 }
 .menu li {
   position: relative;
+  cursor: pointer;
 }
 .menu li:hover:after {
   content: "";
@@ -71,6 +73,7 @@ li {
   display: flex;
   align-items: center;
   gap: 3rem;
+  position: relative;
 }
 
 .profile-content img {
@@ -80,4 +83,39 @@ li {
 .profile-content img:nth-child(2):hover {
   border: 3px solid var(--orange);
   border-radius: 2rem;
+}
+
+.cart-content {
+  display: none;
+  width: 350px;
+  background: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 70px;
+  right: -85px;
+}
+
+.show {
+  display: block;
+}
+
+.cart-title {
+  padding: 1.5rem 1rem;
+  border-bottom: 2px solid var(--light-grayish-blue);
+}
+
+.cart-title span {
+  font-weight: 700;
+  color: var(--black);
+}
+
+.cart-text {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.cart-text p {
+  color: var(--dark-grayish-blue);
+  font-weight: 700;
 }

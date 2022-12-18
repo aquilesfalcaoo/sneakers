@@ -28,6 +28,7 @@ li {
   align-items: center;
   padding: 2rem 0;
   border-bottom: 1px solid var(--light-grayish-blue);
+  position: relative;
 }
 
 .menu {
@@ -43,6 +44,21 @@ li {
   text-decoration: none;
 }
 
+.menu a:hover:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 5px;
+  background: var(--orange);
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+}
+
+.menu a:first-child:after {
+  background: unset;
+}
+
 .menu img {
   margin-right: 2rem;
 }
@@ -53,6 +69,11 @@ li {
   gap: 3rem;
 }
 
-.profile-content img:first-child {
+.profile-content img {
   cursor: pointer;
+}
+
+.profile-content img:nth-child(2):hover {
+  border: 3px solid var(--orange);
+  border-radius: 2rem;
 }

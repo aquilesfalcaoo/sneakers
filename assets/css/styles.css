@@ -145,16 +145,28 @@ main.container {
   justify-content: space-between;
   gap: 2rem;
 }
+
+@keyframes animation_fade {
+  0%    { opacity: 0; }
+  100%   { opacity: 1; }
+}
+
 .main-image img {
   width: 100%;
   border-radius: 15px;
+  animation: animation_fade 0.3s;
 }
+
 .item-colections {
   cursor: pointer;
 }
 .item-colections.active {
   border: 2px solid #ff7d1a;
   border-radius: 15px;
+
+}
+.item-colections img {
+  transition: opacity ease-in-out 0.2s;
 }
 .item-colections.active img {
   opacity: 0.3;

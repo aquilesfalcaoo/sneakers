@@ -1,3 +1,5 @@
+//Cart
+
 const cart = document.querySelector(".cart");
 
 function showCart() {
@@ -5,6 +7,8 @@ function showCart() {
 }
 
 cart.addEventListener("click", showCart);
+
+//Product image
 
 const items_product = document.querySelectorAll(".item-colections");
 const imagem_principal = document.querySelector("#main_image");
@@ -27,4 +31,24 @@ items_product.forEach((el) => {
       }
     }
   });
+});
+
+// Quantity product
+
+const button_for_minus = document.querySelector("#minus_button");
+const button_for_more = document.querySelector("#more_button");
+const quantity = document.querySelector(".quantity");
+let count_quantity = 0;
+
+button_for_more.addEventListener("click", () => {
+  if (count_quantity >= 0) {
+    count_quantity++;
+    quantity.innerHTML = count_quantity;
+  }
+});
+button_for_minus.addEventListener("click", () => {
+  if (count_quantity > 0) {
+    count_quantity--;
+    quantity.innerHTML = count_quantity;
+  }
 });

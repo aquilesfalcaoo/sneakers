@@ -147,12 +147,8 @@ main.container {
 }
 
 @keyframes animation_fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0%    { opacity: 0; }
+  100%   { opacity: 1; }
 }
 
 .main-image img {
@@ -165,8 +161,9 @@ main.container {
   cursor: pointer;
 }
 .item-colections.active {
-  border: 2px solid var(--orange);
+  border: 2px solid #ff7d1a;
   border-radius: 15px;
+
 }
 .item-colections img {
   transition: opacity ease-in-out 0.2s;
@@ -205,12 +202,12 @@ main.container {
 .content-value .value {
   font-size: 2rem;
   font-weight: bold;
-  color: #000;
+  color:#000;
 }
 .content-value .discount {
   padding: 0.2rem 0.5rem;
   border-radius: 10px;
-  color: var(--orange);
+  color: #ff7d1a;
   font-weight: 600;
   background-color: #ff7d1a34;
 }
@@ -233,8 +230,8 @@ main.container {
   text-align: center;
   align-items: center;
   gap: 1rem;
-  background-color: var(--orange);
-  border-radius: 10px;
+  background-color: #ff7d1a;
+  border-radius: 15px;
   border: none;
   box-shadow: 0 3px 6px #ff7d1a34;
   color: #fff;
@@ -242,35 +239,24 @@ main.container {
   font-weight: 600;
   cursor: pointer;
   transition: transform ease 0.3s;
-  padding: 1.3rem 0;
 }
-
 .addCart:hover {
   transform: translateY(-5px) scale(1.02);
 }
-
-.quantity {
-  background: #f0f3ff;
-  border: inherit;
-  color: #000;
-  font-weight: 600;
-  outline: unset;
-  text-align: center;
-}
-
 .quantity-button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 0.5rem;
+  width: 35%;
+  padding: 0.6rem 0.5rem;
   background-color: #f0f3ff;
-  border-radius: 10px;
+  border-radius: 15px;
   height: 50px;
 }
 
 .quantity-button button {
   font-size: 2rem;
-  color: var(--orange);
+  color: #ff7d1a;
   font-weight: 500;
   background-color: unset;
   display: flex;
@@ -279,9 +265,8 @@ main.container {
   outline: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
 }
-.quantity-button {
+.quantity-button .quantity {
   color: #000;
   font-weight: 600;
 }

@@ -16,7 +16,7 @@ const images = {
   image_1: "./assets/images/image-product-1.jpg",
   image_2: "./assets/images/image-product-2.jpg",
   image_3: "./assets/images/image-product-3.jpg",
-  image_4: "./assets/images/image-product-4.jpg"
+  image_4: "./assets/images/image-product-4.jpg",
 };
 
 items_product.forEach((el) => {
@@ -41,23 +41,25 @@ items_product.forEach((el) => {
 
 //* Counter Product
 
-const button_for_minus = document.querySelector("#minus_button");
-const button_for_more = document.querySelector("#more_button");
-const quantity = document.querySelector(".quantity");
-
+const quantity = document.querySelectorAll(".botoes_quantidade");
+const count = document.querySelector(".quantity");
+const quantity_cart = document.querySelector("#quantity_cart");
+const total_sum = document.querySelector("#total_sum");
 let count_quantity = 0;
-
-button_for_more.addEventListener("click", () => {
-  if (count_quantity >= 0) {
-    count_quantity++;
-    quantity.innerHTML = count_quantity;
-  }
-});
-button_for_minus.addEventListener("click", () => {
-  if (count_quantity > 0) {
-    count_quantity--;
-    quantity.innerHTML = count_quantity;
-  }
+quantity.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (button.id == "more_button" && count_quantity >= 0) {
+      count_quantity++;
+      count.innerHTML = count_quantity;
+      quantity_cart.innerHTML = count_quantity;
+      total_sum.innerHTML = `$ ${(125 * count_quantity).toFixed(2)}`;
+    } else if (button.id == "minus_button" && count_quantity > 0) {
+      count_quantity--;
+      count.innerHTML = count_quantity;
+      quantity_cart.innerHTML = count_quantity;
+      total_sum.innerHTML = `$ ${(125 * count_quantity).toFixed(2)}`;
+    }
+  });
 });
 
 //* Add a cart
@@ -89,16 +91,16 @@ function deleteProduct() {
   emptyCart();
 }
 
-productDelete.addEventListener('click', () => {
+productDelete.addEventListener("click", () => {
   deleteProduct();
   cartEmptyMessage.style.display = "block";
   incrementProduct = 0;
   countProduct.innerHTML = incrementProduct;
 });
 
-addToCart.addEventListener('click', () => {
-  if(count_quantity == 0) {
-    alert('A quantidade do produto não pode ser 0.');
+addToCart.addEventListener("click", () => {
+  if (count_quantity == 0) {
+    alert("A quantidade do produto não pode ser 0.");
   } else {
     addProduct();
     emptyCart();
